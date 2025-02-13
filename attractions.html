@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore attractions in Ethiopia with Asoniya Platform. Discover popular attractions in Addis Ababa, Lalibela, and Bishoftu.">
+    <meta name="keywords" content="Ethiopia, travel, tourism, Addis Ababa, Lalibela, Bishoftu, attractions, visit duration">
+    <title>Asoniya Platform - Attractions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container text-center">
+            <h1>Welcome to Asoniya Platform</h1>
+            <p>Your gateway to exploring Ethiopia</p>
+        </div>
+    </header>
+    <!-- Back Button -->
+    <section class="back-button bg-light py-3">
+        <div class="container">
+            <a href="destinations.html" class="btn btn-secondary">Back to Destinations</a>
+        </div>
+    </section>
+    <!-- Attraction Blocks -->
+    <section class="attractions py-5" id="attractions">
+        <div class="container">
+            <h2 class="text-center mb-4" id="attraction-title"></h2>
+            <div class="row" id="attraction-list">
+                <!-- Attractions will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+    <!-- Call to Action -->
+    <section class="call-to-action text-center mt-5 mb-5">
+        <a href="accommodation.html" class="btn btn-primary">Book Accommodation</a>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 Asoniya Platform. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Get the destination from the URL query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const destination = urlParams.get('destination');
+            // Capitalize the first letter of the destination
+            function capitalizeFirstLetter(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            }
+            // Sample attractions data
+            const attractions = {
+                'addis-ababa': [
+                    { name: 'Entoto', description: 'Enjoy the scenic views and hot springs of Entoto.', fee: '$10', image: 'img/entoto.jpg' },
+                    { name: 'Unity Park', description: 'Relax and enjoy the green spaces of Unity Park.', fee: 'Free', image: 'img/unity-park.jpg' },
+                    { name: 'Adwa Museum', description: 'Learn about the Battle of Adwa and Ethiopian history.', fee: '$5', image: 'img/adwa-museum.jpg' }
+                ],
+                'lalibela': [
+                    { name: 'Lalibela Churches', description: 'Visit the ancient rock-hewn churches of Lalibela.', fee: '$20', image: 'img/lalibela.jpg' },
+                    { name: 'Lalibela Museum', description: 'Discover the history and culture of Lalibela.', fee: '$15', image: 'img/lalibela.jpg' }
+                ],
+                'bishoftu': [
+                    { name: 'Hot Springs', description: 'Experience the relaxing hot springs of Bishoftu.', fee: '$8', image: 'img/bishoftu.jpg' },
+                    { name: 'Waterfalls', description: 'Enjoy the beautiful waterfalls of Bishoftu.', fee: '$12', image: 'img/bishoftu.jpg' }
+                ]
+            };
+            // Set the title and populate the attractions
+            if (destination) {
+                $('#attraction-title').text(`Attractions in ${capitalizeFirstLetter(destination)}`);
+                const selectedAttractions = attractions[destination] || [];
+                selectedAttractions.forEach(function(attraction) {
+                    $('#attraction-list').append(`
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="${attraction.image}" class="card-img-top" alt="${attraction.name}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${attraction.name}</h5>
+                                    <p class="card-text">${attraction.description}</p>
+                                    <p class="card-fee"><strong>Entrance Fee:</strong> ${attraction.fee}</p>
+                                    <a href="#" class="btn btn-primary">More Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                });
+            } else {
+                $('#attraction-title').text('No Destination Selected');
+                $('#attraction-list').append('<div class="col-md-12"><p>Please select a destination from the Destinations page.</p></div>');
+            }
+        });
+    </script>
+</body>
+</html>
