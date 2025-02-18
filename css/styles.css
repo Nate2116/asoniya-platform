@@ -7,27 +7,32 @@ body {
 
 .hero {
     position: relative;
-    background: url('img/ethiopia.jpg') center/cover no-repeat;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+    overflow: hidden;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.carousel-inner img {
     width: 100%;
-    height: 100%;
-    background: rgba(229, 61, 61, 0.6);
+    height: 100vh;
+    object-fit: cover;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .btn-custom {
@@ -234,6 +239,51 @@ footer {
 .service-box p {
     font-size: 1rem;
     color: #666;
+}
+
+/* Additional styles for login and signup sections */
+.login-section, .signup-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.login-section .form-group label, .signup-section .form-group label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.login-section .form-control, .signup-section .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.login-section .btn-custom, .signup-section .btn-custom {
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-section .btn-custom:hover, .signup-section .btn-custom:hover {
+    background: #ff9800;
+    color: white;
+    transform: scale(1.1);
+}
+
+.login-section p, .signup-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.login-section a, .signup-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-section a:hover, .signup-section a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */

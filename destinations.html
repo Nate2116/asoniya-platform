@@ -36,7 +36,7 @@
             <h2 class="text-center mb-4">Popular Destinations</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <a href="attractions.html?destination=addis-ababa" class="text-decoration-none">
+                    <a href="attractions.html?destination=addis-ababa" class="text-decoration-none destination-link">
                         <div class="card destination-card">
                             <img src="img/addis-ababa.jpg" class="card-img-top" alt="Addis Ababa">
                             <div class="card-body">
@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <a href="attractions.html?destination=lalibela" class="text-decoration-none">
+                    <a href="attractions.html?destination=lalibela" class="text-decoration-none destination-link">
                         <div class="card destination-card">
                             <img src="img/lalibela.jpg" class="card-img-top" alt="Lalibela">
                             <div class="card-body">
@@ -58,7 +58,7 @@
                     </a>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <a href="attractions.html?destination=bishoftu" class="text-decoration-none">
+                    <a href="attractions.html?destination=bishoftu" class="text-decoration-none destination-link">
                         <div class="card destination-card">
                             <img src="img/bishoftu.jpg" class="card-img-top" alt="Bishoftu">
                             <div class="card-body">
@@ -73,7 +73,7 @@
     </section>
     <!-- Call to Action -->
     <section class="call-to-action text-center mt-5 mb-5">
-        <a href="accommodation.html" class="btn btn-primary">Book Accommodation</a>
+        <a href="#" id="nextButton" class="btn btn-primary">Next</a>
     </section>
     <!-- Footer -->
     <footer class="bg-light text-center py-3">
@@ -93,6 +93,43 @@
                 autoclose: true,
                 todayHighlight: true,
                 multidate: true
+            });
+
+            // Add hover effect to destination cards
+            $('.destination-card').hover(
+                function() {
+                    $(this).addClass('shadow-lg');
+                },
+                function() {
+                    $(this).removeClass('shadow-lg');
+                }
+            );
+
+            // Handle destination selection
+            $('.destination-link').click(function(event) {
+                event.preventDefault();
+                const destinationUrl = $(this).attr('href');
+                // Check if user is logged in (placeholder logic)
+                const isLoggedIn = false; // Replace with actual login check
+                if (!isLoggedIn) {
+                    alert('Please log in to select destinations.');
+                    window.location.href = 'login.html'; // Redirect to login page
+                } else {
+                    window.location.href = destinationUrl; // Proceed to attractions page
+                }
+            });
+
+            // Handle next button click
+            $('#nextButton').click(function(event) {
+                event.preventDefault();
+                // Check if user is logged in (placeholder logic)
+                const isLoggedIn = false; // Replace with actual login check
+                if (!isLoggedIn) {
+                    alert('Please log in to continue.');
+                    window.location.href = 'login.html'; // Redirect to login page
+                } else {
+                    window.location.href = 'accommodation.html'; // Redirect to accommodation page
+                }
             });
         });
     </script>
