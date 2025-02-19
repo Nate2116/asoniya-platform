@@ -1,0 +1,87 @@
+/* Accommodation Section */
+.accommodation {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.accommodation .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    height: 100%; /* Ensure all cards have the same height */
+}
+
+.accommodation .card:hover {
+    transform: translateY(-10px);
+}
+
+.accommodation .card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.accommodation .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure text is evenly distributed */
+}
+
+.accommodation .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.accommodation .card-text {
+    font-size: 1rem;
+    color: #555;
+    height: 60px; /* Ensure three lines of text fit within this height */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to three lines */
+    -webkit-box-orient: vertical;
+}
+
+.accommodation .card-fee {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px; /* Reduce margin to minimize white space */
+}
+
+.accommodation .card-footer {
+    background-color: transparent;
+    border-top: none;
+    padding: 0;
+}
+
+.accommodation .card-footer p {
+    margin-bottom: 5px;
+}
+
+.accommodation .card-footer a {
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .accommodation .card img {
+        height: 150px;
+    }
+
+    .accommodation .card-title {
+        font-size: 1.1rem;
+    }
+
+    .accommodation .card-text {
+        height: 45px;
+        -webkit-line-clamp: 2;
+    }
+
+    .accommodation .card-fee {
+        font-size: 0.9rem;
+    }
+}

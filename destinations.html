@@ -104,33 +104,6 @@
                     $(this).removeClass('shadow-lg');
                 }
             );
-
-            // Handle destination selection
-            $('.destination-link').click(function(event) {
-                event.preventDefault();
-                const destinationUrl = $(this).attr('href');
-                // Check if user is logged in (placeholder logic)
-                const isLoggedIn = false; // Replace with actual login check
-                if (!isLoggedIn) {
-                    alert('Please log in to select destinations.');
-                    window.location.href = 'login.html'; // Redirect to login page
-                } else {
-                    window.location.href = destinationUrl; // Proceed to attractions page
-                }
-            });
-
-            // Handle next button click
-            $('#nextButton').click(function(event) {
-                event.preventDefault();
-                // Check if user is logged in (placeholder logic)
-                const isLoggedIn = false; // Replace with actual login check
-                if (!isLoggedIn) {
-                    alert('Please log in to continue.');
-                    window.location.href = 'login.html'; // Redirect to login page
-                } else {
-                    window.location.href = 'accommodation.html'; // Redirect to accommodation page
-                }
-            });
         });
     </script>
 </body>

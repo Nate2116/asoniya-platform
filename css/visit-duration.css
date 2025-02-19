@@ -1,0 +1,16 @@
+.visit-duration {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.visit-duration .form-label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.visit-duration .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}

@@ -1,0 +1,28 @@
+.btn-custom {
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background: #ff9800;
+    color: white;
+    transform: scale(1.1);
+}
+
+.call-to-action a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.call-to-action a:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}

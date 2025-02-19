@@ -1,0 +1,31 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        height: 45px;
+        -webkit-line-clamp: 2;
+    }
+
+    .card-fee {
+        font-size: 0.9rem;
+    }
+}
