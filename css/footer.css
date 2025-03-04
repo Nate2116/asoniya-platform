@@ -1,6 +1,97 @@
-footer {
-    background-color: #222;
-    color: white;
-    padding: 20px 0;
+/* Redesigned Footer Styles */
+.footer {
+    background: #1a1a1a; /* Dark background */
+    color: #ffffff;
+    padding: 50px 0;
     text-align: center;
+}
+
+.footer h5 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer p,
+.footer ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #bbbbbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #f8b400; /* Accent color */
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: space-around; /* Scatter social media icons */
+    margin: 20px auto; /* Center alignment with spacing */
+    max-width: 200px;
+}
+
+.footer .social-icons a {
+    font-size: 24px; /* Larger icons */
+    color: #ffffff;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+    color: #f8b400; /* Dark yellow on hover */
+}
+
+.footer .text-center p {
+    margin-top: 0;
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+/* Ensure all headings are aligned horizontally */
+.footer .container .row {
+    display: flex;
+    align-items: flex-start; /* Align columns to the top */
+    justify-content: space-between; /* Distribute columns evenly */
+    flex-wrap: wrap;
+    max-width: 1200px; /* Limit the width for better spacing */
+    margin: 0 auto; /* Center the row */
+}
+
+.footer .container .row > div {
+    flex: 1;
+    max-width: 30%; /* Ensures equal width for all three sections */
+    text-align: left; /* Align content to the left */
+    padding: 0 15px; /* Consistent padding */
+    margin-bottom: 20px; /* Consistent margin */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Push the Legal Information column to the right */
+.footer .container .row > div:nth-child(2) {
+    margin-left: auto; /* Push this column to the right */
+}
+
+/* Style the About Us link */
+.footer .container .row > div:first-child h5 a {
+    color: #007bff; /* White color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .container .row > div:first-child h5 a:hover {
+    color: #FFD700; /* Dark yellow on hover */
 }

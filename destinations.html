@@ -8,16 +8,47 @@
     <title>Asoniya Platform - Destinations</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container text-center">
-            <h1>Welcome to Asoniya Platform</h1>
-            <p>Your gateway to exploring Ethiopia</p>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-yellow">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h1 class="text-black">Asoniya</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="destinations.html">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="accommodation.html">Accommodations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="travel-agencies.html">Travel Agencies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="car-rentals.html">Car Rentals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="profile.html">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+
     <!-- Visit Duration Request -->
     <section class="visit-duration bg-light py-5">
         <div class="container">
@@ -25,11 +56,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <label for="visit-duration" class="form-label">Select Your Visit Duration:</label>
-                    <input type="text" class="form-control datepicker" id="visit-duration" placeholder="Select Dates">
+                    <input type="text" class="form-control" id="visit-duration" placeholder="Select Dates">
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Destination Blocks -->
     <section class="destinations py-5">
         <div class="container">
@@ -71,28 +103,61 @@
             </div>
         </div>
     </section>
+
     <!-- Call to Action -->
     <section class="call-to-action text-center mt-5 mb-5">
         <a href="#" id="nextButton" class="btn btn-primary">Next</a>
     </section>
-    <!-- Footer -->
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2024 Asoniya Platform. All rights reserved.</p>
-    </footer>
+
+    <footer class="footer bg-dark-yellow text-black">
+    <div class="container">
+        <div class="row">
+            <!-- About Us -->
+            <div class="col-md-4 mb-4">
+                <h5><a href="about.html" class="text-black">About Us</a></h5>
+                <p class="about-us-text">Asoniya is dedicated to showcasing the beauty, culture, and heritage of Ethiopia through seamless travel experiences.</p>
+            </div>
+            <!-- Legal Information -->
+            <div class="col-md-4 mb-4">
+                <h5>Legal Information</h5>
+                <ul class="list-unstyled">
+                    <li><a href="terms.html" class="text-black">Terms and Conditions</a></li>
+                    <li><a href="privacy.html" class="text-black">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-4">
+                <h5>Contact Us</h5>
+                <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                <p><i class="fas fa-phone"></i> +251 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@asoniya.com</p>
+            </div>
+        </div>
+        <!-- Social Media Icons and Copyright -->
+        <div class="text-center">
+            <div class="social-icons">
+                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2024 Asoniya. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         $(document).ready(function() {
-            // Initialize datepicker
-            $('.datepicker').datepicker({
-                format: "mm/dd/yyyy",
-                startDate: new Date(),
-                endDate: "+1y",
-                autoclose: true,
-                todayHighlight: true,
-                multidate: true
+            // Initialize Flatpickr for visit duration selection
+            flatpickr("#visit-duration", {
+                mode: "range", // Enable range selection
+                minDate: "today", // Disable past dates
+                dateFormat: "Y-m-d", // Date format
             });
 
             // Add hover effect to destination cards

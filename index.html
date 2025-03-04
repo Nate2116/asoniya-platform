@@ -11,6 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-yellow">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h1 class="text-black">Asoniya</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="destinations.html">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="accommodation.html">Accommodations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="travel-agencies.html">Travel Agencies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="car-rentals.html">Car Rentals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="profile.html">Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- Hero Section with Slideshow -->
     <section class="hero">
         <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
@@ -115,9 +150,43 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer class="footer text-center">
-        <p>&copy; 2024 Asoniya Platform. Explore Ethiopia with us.</p>
+    <footer class="footer bg-dark-yellow text-black">
+        <div class="container">
+            <div class="row">
+                <!-- About Us -->
+                <div class="col-md-4 mb-4">
+                    <h5>About Us</h5>
+                    <p>Asoniya is dedicated to showcasing the beauty, culture, and heritage of Ethiopia through seamless travel experiences.</p>
+                </div>
+                <!-- Legal Information -->
+                <div class="col-md-4 mb-4">
+                    <h5>Legal Information</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="terms.html" class="text-black">Terms and Conditions</a></li>
+                        <li><a href="privacy.html" class="text-black">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+                    <p><i class="fas fa-phone"></i> +251 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@asoniya.com</p>
+                </div>
+                <!-- Copyright & Social Media -->
+                <div class="text-center mt-4">
+                    <p>&copy; 2024 Asoniya. All rights reserved.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

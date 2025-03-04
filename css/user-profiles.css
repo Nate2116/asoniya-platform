@@ -1,0 +1,60 @@
+/* User Profiles Section */
+.user-profiles {
+    background-color: #ffffff;
+    padding: 40px 0;
+    margin-top: 70px; /* Adjust margin to account for fixed header */
+}
+
+.user-profiles h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.user-profiles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-profiles li {
+    margin-bottom: 10px;
+}
+
+.user-profiles .form-group label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.user-profiles .form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.user-profiles .btn-primary {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-profiles h3 {
+        font-size: 1.25rem;
+    }
+
+    .user-profiles li {
+        margin-bottom: 5px;
+    }
+
+    .user-profiles .form-group label {
+        font-size: 1rem;
+    }
+
+    .user-profiles .form-control {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .user-profiles .btn-primary {
+        margin-top: 15px;
+    }
+}

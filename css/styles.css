@@ -1,6 +1,9 @@
 /* Import general styles */
 @import url('general.css');
 
+/* Import header styles */
+@import url('header.css');
+
 /* Import hero section styles */
 @import url('hero.css');
 
@@ -33,3 +36,12 @@
 
 /* Import accommodation styles */
 @import url('accommodation.css');
+
+/* Import travel agents styles */
+@import url('travel-agencies.css-');
+
+/* Import trip summary styles */
+@import url('trip-summary.css');
+
+/* Import user profiles styles */
+@import url('user-profiles.css');

@@ -1,46 +1,42 @@
-.destinations {
+/* Car Rentals Section */
+.car-rentals {
     background-color: #ffffff;
     padding: 40px 0;
+    margin-top: 70px; /* Adjust margin to account for fixed header */
 }
 
-.card {
+.car-rentals .card {
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s;
     height: 100%; /* Ensure all cards have the same height */
 }
 
-.card:hover {
+.car-rentals .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card.selected {
-    border: 2px solid #FFD700; /* Highlight selected card */
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-}
-
-.card img {
+.car-rentals .card img {
     height: 200px;
     object-fit: cover;
 }
 
-.card-body {
+.car-rentals .card-body {
     padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensure text is evenly distributed */
 }
 
-.card-title {
+.car-rentals .card-title {
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
-.card-text {
+.car-rentals .card-text {
     font-size: 1rem;
     color: #555;
     height: 60px; /* Ensure three lines of text fit within this height */
@@ -51,22 +47,28 @@
     -webkit-box-orient: vertical;
 }
 
-.card-fee {
+.car-rentals .card-fee {
     font-size: 1rem;
     color: #555;
     margin-bottom: 5px; /* Reduce margin to minimize white space */
 }
 
-.card-footer {
-    background-color: transparent;
-    border-top: none;
-    padding: 0;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-rentals .card img {
+        height: 150px;
+    }
 
-.card-footer p {
-    margin-bottom: 5px;
-}
+    .car-rentals .card-title {
+        font-size: 1.1rem;
+    }
 
-.card-footer a {
-    margin-top: 5px;
+    .car-rentals .card-text {
+        height: 45px;
+        -webkit-line-clamp: 2;
+    }
+
+    .car-rentals .card-fee {
+        font-size: 0.9rem;
+    }
 }

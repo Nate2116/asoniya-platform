@@ -1,46 +1,42 @@
-.destinations {
+/* Travel Agencies Section */
+.travel-agencies {
     background-color: #ffffff;
     padding: 40px 0;
+    margin-top: 70px; /* Adjust margin to account for fixed header */
 }
 
-.card {
+.travel-agencies .card {
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s;
     height: 100%; /* Ensure all cards have the same height */
 }
 
-.card:hover {
+.travel-agencies .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.card.selected {
-    border: 2px solid #FFD700; /* Highlight selected card */
-    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
-}
-
-.card img {
+.travel-agencies .card img {
     height: 200px;
     object-fit: cover;
 }
 
-.card-body {
+.travel-agencies .card-body {
     padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Ensure text is evenly distributed */
 }
 
-.card-title {
+.travel-agencies .card-title {
     font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
-.card-text {
+.travel-agencies .card-text {
     font-size: 1rem;
     color: #555;
     height: 60px; /* Ensure three lines of text fit within this height */
@@ -51,22 +47,28 @@
     -webkit-box-orient: vertical;
 }
 
-.card-fee {
+.travel-agencies .card-fee {
     font-size: 1rem;
     color: #555;
     margin-bottom: 5px; /* Reduce margin to minimize white space */
 }
 
-.card-footer {
-    background-color: transparent;
-    border-top: none;
-    padding: 0;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .travel-agencies .card img {
+        height: 150px;
+    }
 
-.card-footer p {
-    margin-bottom: 5px;
-}
+    .travel-agencies .card-title {
+        font-size: 1.1rem;
+    }
 
-.card-footer a {
-    margin-top: 5px;
+    .travel-agencies .card-text {
+        height: 45px;
+        -webkit-line-clamp: 2;
+    }
+
+    .travel-agencies .card-fee {
+        font-size: 0.9rem;
+    }
 }
